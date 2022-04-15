@@ -33,6 +33,6 @@ jobs:
       run: |
         git config --local user.email "action@github.com"
         git config --local user.name "GitHub Action"
-        git add docs/result.json -f
-        git commit -m "Update docs/result.json" -a
+        git add result.json -f
+        git commit -m "Update result.json" -a
         git push "https://schrammalama:${{ secrets.GITHUB_PERSONAL_TOKEN }}@github.com/schrammalama/PriceChartingValueStorage.git" HEAD:main --follow-tags
