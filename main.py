@@ -11,12 +11,11 @@ soup = BeautifulSoup(page.content, "html.parser")
 
 results = soup.find("td", class_="number js-value js-price")
 
-result_json_content = {}
-result_json_content['timestamp'] = datetime.datetime.now().strftime('%c')
-result_json_content['value'] = results.text
+timestamp = datetime.datetime.now().strftime('%c')
+value = results.text
 
 data_json_filename = 'result.json'
 
-jsonDump = json.dumps(result_json_content, sort_keys=True, indent=4)
+jsonDump = json.dumps({"Time", timestamp, "Value", value}, sort_keys=True, indent=4)
 with open(data_json_filename, 'a') as data_json_file:
   json.dump(jsonDump, data_json_file)
