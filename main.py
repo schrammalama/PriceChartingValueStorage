@@ -17,5 +17,6 @@ result_json_content['value'] = results.text
 
 data_json_filename = 'result.json'
 
+jsonDump = json.dump(result_json_content, indent=4)
 with open(data_json_filename, 'a') as data_json_file:
-  json.dump(result_json_content, indent=4, data_json_file)
+  json.dump(jsonDump, data_json_file)
