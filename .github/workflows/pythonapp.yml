@@ -35,5 +35,4 @@ jobs:
         git config --local user.name "GitHub Action"
         git add docs/result.json -f
         git commit -m "Update docs/result.json" -a
-        git push "https://schrammalama:${{
-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}}@github.com/schrammalama/PriceChartingValueStorage.git" HEAD:main --follow-tags
+        git push "https://schrammalama:${{ secrets.GITHUB_PERSONAL_TOKEN }}@github.com/schrammalama/PriceChartingValueStorage.git" HEAD:main --follow-tags
