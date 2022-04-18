@@ -17,4 +17,4 @@ value = results.text
 data_json_filename = 'result.json'
 
 with open(data_json_filename, 'a') as data_json_file:
-  json.dump({"A" : results, "B" : timestamp}, data_json_file)
+  json.dump({"A": results, "B": timestamp}, data_json_file)
